@@ -1,95 +1,30 @@
-import Image from 'next/image'
+"use client";
+
 import styles from './page.module.css'
+import React, { useEffect, useState, useReducer } from 'react';
+import Sidebar from '@/components/Sidebar/Sidebar';
+import MainWindow from '@/components/MainWindow/MainWindow';
+import reducer from '@/actions/actions';
+import initialReducerState from '@/lib/InitialReducerState';
+
+export const StateContext = React.createContext();
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState("explore");
+  const [userId, setUserId] = useState(3430);
+
+  const [state, dispatch] = useReducer(reducer, initialReducerState);
+
+  useEffect(() => { console.log("Watching User: ", userId) }, [userId]);
+
+  useEffect(() => { console.log("Watching Groups: ", state.groups) }, [state.groups]);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <StateContext.Provider value={{ state, dispatch }}>
+      <main className={styles.main}>
+        <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+        <MainWindow setActiveTab={setActiveTab} userId={userId} setUserId={setUserId} activeTab={activeTab} />
+      </main>
+    </StateContext.Provider>
   )
 }

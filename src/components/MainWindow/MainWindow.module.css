@@ -1,0 +1,41 @@
+.section {
+    background-color: var(--main-grey-color);
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid var(--light-border-color);
+}
+
+.gradient-wrapper {
+    margin: 20px 0;
+    background: rgb(249,239,12);
+    background: linear-gradient(128deg, rgba(249,239,12,1) 0%, rgba(251,145,1,1) 100%); 
+    padding: 3px;
+    border-radius: 25px;
+    width: 85%;
+}
+
+.cta {
+    background-color: var(--main-grey-color);
+    border-radius: 22px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cta p {
+    margin: 0;
+    margin-left: 10px;
+    width: 40%;
+}
+
+.cta-button {
+    background: rgb(249,239,12);
+    background: linear-gradient(128deg, rgba(249,239,12,1) 0%, rgba(251,145,1,1) 100%); 
+    border: none;
+    border-radius: 25px;
+    padding: 3px 30px;
+    margin-right: 10px;
+}

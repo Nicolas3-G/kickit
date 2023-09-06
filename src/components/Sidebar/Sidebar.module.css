@@ -1,0 +1,46 @@
+.section {
+    min-width: 15vw;
+    padding: 20px 0px;
+    margin-right: 20px;
+}
+
+.main-title-holder {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    align-items: center;
+}
+
+.main-icon {
+    max-height: 100%;
+    margin-right: 15px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-item {
+    width: 80%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.nav-item.selected {
+    background-color: var(--selected-highlight-color);
+}
+
+.nav-item:hover {
+    background-color: var(--selected-highlight-color);
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-holder {
+    margin: 20px 0;
+}
