@@ -1,8 +1,8 @@
 const initialReducerState = {
     groups: new Map([
-        [1, { id: 1, title: "Westlake Dance", type: "group", desc: "Expansive dance community, with shows and daily classes!", members: [], ownerId: 2, thumbnail: "/feedElementImages/image-9.png" }],
-        [2, { id: 2, title: "Zari Meditation", type: "group", desc: "Meditation group with weekly open-air events", members: [], ownerId: 2, thumbnail: "/feedElementImages/image-1.png" }],
-        [3, { id: 3, title: "Design Group", type: "group", desc: "Join a group of design-minded folks who love what they do!", members: [], ownerId: 2, thumbnail: "/feedElementImages/image-2.png" }],
+        [1, { id: 1, title: "Westlake Dance", type: "group", desc: "Expansive dance community, with shows and daily classes!", members: [1234, 1235, 1236], ownerId: 2, thumbnail: "/feedElementImages/image-9.png" }],
+        [2, { id: 2, title: "Zari Meditation", type: "group", desc: "Meditation group with weekly open-air events", members: [1234, 1235, 1236], ownerId: 2, thumbnail: "/feedElementImages/image-1.png" }],
+        [3, { id: 3, title: "Design Group", type: "group", desc: "Join a group of design-minded folks who love what they do!", members: [1234, 1235, 1236], ownerId: 2, thumbnail: "/feedElementImages/image-2.png" }],
       ]),
     events: new Map ([
         [1, { id: 1, title: "Game Night @ O'Mally's", type: "event", desc: "Broad games and drinks, come on down!", members: [], ownerId: 2, thumbnail: "/feedElementImages/image-3.png"}],

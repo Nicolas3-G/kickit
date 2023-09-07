@@ -58,7 +58,7 @@ const ForYouDisplay = ({ handleFeedElementClick, userId }) => {
 
         return (
             <button onClick={() => { handlePreferenceClick() }} className={classNames(styles["pref-button"], styles[name], selectedPrefs.includes(name) ? styles.selected : "")}>
-                <img src={`pref-images/${name}-icon.png`} class={styles["pref-image"]} />
+                <img src={`pref-images/${name}-icon.png`} className={styles["pref-image"]} />
                 <label>{name}</label>
             </button>
         )

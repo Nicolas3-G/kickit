@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import styles from "./FocusItemTab.module.css";
 import { StateContext } from "@/app/page";
+import {MemberDisplayBar, FeaturedDisplayBar}from "./components/displayBars";
+import {NoteCard, AnnoucementLogCard, UpcomingEventCard} from "./components/cards";
 
 const FocusItemTab = ({ focusedItem, handleJoinGroupClick, handleLeaveGroupClick, userId }) => {
     const [itemData, setItemData] = useState(null);
@@ -36,8 +38,8 @@ const FocusItemTab = ({ focusedItem, handleJoinGroupClick, handleLeaveGroupClick
                         <img className={styles["item-image"]} src={itemData.thumbnail} alt="item image" />
                     </div>
                     <div className={styles["header-text"]}>
-                        <h1>{itemData.title}</h1>
-                        <span className={styles["icon-text-holder"]}><img className={styles["location-icon"]} src="kickit-icon.png" /> San Francisco, CA</span>
+                        <h1 className={styles["item-title"]}>{itemData.title}</h1>
+                        <span className={styles["icon-text-holder"]}><img className={styles["location-icon"]} src="icons/location-icon.png" /> San Francisco, CA</span>
                         <p>{itemData.desc}</p>
                     </div>
                     <div className={styles["corner-ui"]}>
@@ -53,11 +55,11 @@ const FocusItemTab = ({ focusedItem, handleJoinGroupClick, handleLeaveGroupClick
                     </div>
                 </section>
                 <main className={styles["main-grid"]}>
-                    <div  className={`${styles["grid-block"]} ${styles["a"]}`}/>
-                    <div  className={`${styles["grid-block"]} ${styles["b"]}`}/>
-                    <div  className={`${styles["grid-block"]} ${styles["c"]}`}/>
-                    <div  className={`${styles["grid-block"]} ${styles["d"]}`}/>
-                    <div  className={`${styles["grid-block"]} ${styles["e"]}`}/>
+                    <NoteCard />
+                    <MemberDisplayBar focusedItem={focusedItem} />
+                    <FeaturedDisplayBar />
+                    <AnnoucementLogCard />
+                    <UpcomingEventCard />
                     <div  className={`${styles["grid-block"]} ${styles["f"]}`}/>
                     <div  className={`${styles["grid-block"]} ${styles["g"]}`}/>
                 </main>

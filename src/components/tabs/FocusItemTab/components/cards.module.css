@@ -1,0 +1,86 @@
+.card {
+    background-color: var(--main-dark-color);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    
+}
+
+.note-card {
+    grid-row: 1 / 3;
+}
+
+.annoucement-log-card {
+    grid-column: 4 / 5;
+    grid-row: 1 / 4;
+}
+
+.upcoming-event-card {
+    grid-column: 1 / 2;
+}
+
+.title {
+    margin-top: 0px;
+}
+
+.user-card {
+    background-color: white;
+}
+
+.annoucement-title {
+    text-align: center;
+    margin: 0px;
+}
+
+.annoucement {
+    background-color: var(--main-grey-color);
+    padding: 10px 5px;
+}
+
+.annoucement-feed {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.sender-name {
+    font-weight: bold;
+    color: rgb(252, 14, 14);
+    text-transform: capitalize;
+}
+
+.system {
+    color: rgb(199, 23, 199);
+}
+
+.small-title {
+    margin: 0;
+    font-size: 12px;
+}
+
+.event-holder {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+}
+
+.event-image {
+    max-width: 40%;
+    max-height: 100%;
+    aspect-ratio: 1;
+}
+
+.upcoming-event-button-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.event-button {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 50%;
+}
