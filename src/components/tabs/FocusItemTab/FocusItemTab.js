@@ -55,7 +55,7 @@ const FocusItemTab = ({ focusedItem, handleJoinGroupClick, handleLeaveGroupClick
                     </div>
                 </section>
                 <main className={styles["main-grid"]}>
-                    <NoteCard />
+                    <NoteCard focusedItem={focusedItem} />
                     <MemberDisplayBar focusedItem={focusedItem} />
                     <FeaturedDisplayBar />
                     <AnnoucementLogCard />
