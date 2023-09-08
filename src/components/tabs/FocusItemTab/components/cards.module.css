@@ -1,9 +1,13 @@
 .card {
     background-color: var(--main-dark-color);
-    margin: 10px;
-    padding: 15px;
+    /* margin: 10px; */
+    padding: 10px 15px;
     border-radius: 15px;
-    
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
 }
 
 .note-card {
@@ -19,8 +23,17 @@
     grid-column: 1 / 2;
 }
 
+.gallery-card {
+    grid-column: 2 / 3;
+}
+
+.latest-creations-card {
+    grid-column: 3 / 4;
+}
+
 .title {
-    margin-top: 0px;
+    margin: 0;
+
 }
 
 .user-card {
@@ -39,7 +52,7 @@
 
 .annoucement-feed {
     font-size: 14px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .sender-name {
@@ -60,22 +73,22 @@
 .event-holder {
     display: flex;
     flex-direction: row;
-    height: 80%;
+    flex-grow: 1;
 }
 
 .event-image {
-    max-width: 40%;
+    max-width: 50%;
     max-height: 100%;
     aspect-ratio: 1;
 }
 
 .upcoming-event-button-holder {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     justify-content: center;
-    gap: 10px;
+    gap: 10px; */
 }
 
 .event-button {
@@ -83,4 +96,60 @@
     padding: 5px 10px;
     border-radius: 15px;
     width: 50%;
+}
+
+.gallery-image {
+    width: 70%;
+}
+
+.gallery-holder {
+    flex-grow: 1;
+    max-height: 90%;
+}
+
+.gallery-image-holder {
+    max-height: 100%;
+
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-button {
+    background-color: #23262700;
+    border: none;
+}
+
+.gallery-button:hover {
+    background-color: #232627a3;
+}
+
+.arrow-icon {
+    width: 15px;
+    height: 15px;
+}
+
+
+
+.latest-creations-card-ui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0px;
+}
+
+.creations-text-holder {
+    text-align: center;
+    width: 100%;
+    height: 50%;
+}
+
+.creation-name {
+    margin: 0px;
+}
+
+.creator-name {
+    margin: 0px;
+    font-size: 14px;
 }
