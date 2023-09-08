@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import styles from "./FocusItemTab.module.css";
 import { StateContext } from "@/app/page";
 import {MemberDisplayBar, FeaturedDisplayBar}from "./components/displayBars";
-import {NoteCard, AnnoucementLogCard, UpcomingEventCard} from "./components/cards";
+import {NoteCard, AnnoucementLogCard, UpcomingEventCard, GalleryCard, LatestCreationsCard} from "./components/cards";
 
 const FocusItemTab = ({ focusedItem, handleJoinGroupClick, handleLeaveGroupClick, userId }) => {
     const [itemData, setItemData] = useState(null);
@@ -60,8 +60,8 @@ const FocusItemTab = ({ focusedItem, handleJoinGroupClick, handleLeaveGroupClick
                     <FeaturedDisplayBar />
                     <AnnoucementLogCard />
                     <UpcomingEventCard />
-                    <div  className={`${styles["grid-block"]} ${styles["f"]}`}/>
-                    <div  className={`${styles["grid-block"]} ${styles["g"]}`}/>
+                    <GalleryCard />
+                    <LatestCreationsCard />
                 </main>
 
 

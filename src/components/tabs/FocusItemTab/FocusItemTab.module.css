@@ -1,6 +1,8 @@
 .section {
     height: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .image-holder {
@@ -20,7 +22,7 @@
     display: flex;
     position: relative;
     flex-direction: row;
-    margin: 0 10px;
+    /* margin: 0 10px; */
     height: 20%;
     border-radius: 15px;
     background-color: var(--main-dark-color);
@@ -53,16 +55,17 @@
 }
 
 .main-grid {
-
+    gap: 10px;
+    flex-grow: 1;
+    max-height: 79%;
+    margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    min-height: 80%;
 }
 
 .grid-block {
     background-color: var(--main-dark-color);
-    margin: 10px;
     border-radius: 15px;
 }
 
