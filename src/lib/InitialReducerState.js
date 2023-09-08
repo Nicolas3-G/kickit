@@ -4,6 +4,11 @@ const initialReducerState = {
         [2, { id: 2, title: "Zari Meditation", type: "group", desc: "Meditation group with weekly open-air events", members: [1234, 1235, 1236], ownerId: 2, thumbnail: "/feedElementImages/image-1.png" }],
         [3, { id: 3, title: "Design Group", type: "group", desc: "Join a group of design-minded folks who love what they do!", members: [1234, 1235, 1236], ownerId: 2, thumbnail: "/feedElementImages/image-2.png" }],
       ]),
+    groupLayoutData: new Map([
+        [1, { id: 1, noteCard: {title: "Welcome", text: "Test Text"}}],
+        [2, { id: 2, noteCard: {title: "Welcome 2", text: "Test Text"}}],
+        [3, { id: 3, noteCard: {title: "Welcome 3", text: "Test Text"}}],
+      ]),
     events: new Map ([
         [1, { id: 1, title: "Game Night @ O'Mally's", type: "event", desc: "Broad games and drinks, come on down!", members: [], ownerId: 2, thumbnail: "/feedElementImages/image-3.png"}],
         [2, { id: 2, title: "Beer Run", type: "event", desc: "Bi-annual drink & run around lake merrit. Register now.", members: [], ownerId: 2, thumbnail: "/feedElementImages/image-4.png"}],

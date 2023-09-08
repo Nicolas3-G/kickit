@@ -33,7 +33,13 @@
 
 .title {
     margin: 0;
+}
 
+.title-edit {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
 }
 
 .user-card {
@@ -152,4 +158,28 @@
 .creator-name {
     margin: 0px;
     font-size: 14px;
+}
+
+.more-button {
+    background: transparent;
+    border: none;
+}
+
+.more-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.save-button {
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    width: 30%;
 }

@@ -6,6 +6,7 @@ export const MemberDisplayBar = ({ focusedItem }) => {
     const { state } = useContext(StateContext);
 
     const group = state.groups.get(focusedItem[0]);
+   
 
     return (
         <div className={styles.card}>

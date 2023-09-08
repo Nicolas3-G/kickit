@@ -1,11 +1,32 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import styles from "./cards.module.css"
+import { StateContext } from '@/app/page';
 
-export const NoteCard = () => {
+
+export const NoteCard = ({ focusedItem }) => {
+  const [editMode, setEditMode] = useState(false);
+  const { state } = useContext(StateContext);
+
+  const layoutData = state.groupLayoutData.get(focusedItem[0]);
+  const cardData = layoutData.noteCard;
+
+  const handleEditButtonClick = () => {
+    setEditMode(!editMode);
+  }
+
+  const handleSaveClick = () => {
+    setEditMode(false);
+  }
+  
   return (
     <div className={`${styles.card} ${styles["note-card"]}`}>
-      <h1 className={styles.title}>Welcome!</h1>
-      <p>Welcome to our group page. Please check out our featured section.</p>
+      <section className={styles.header}>
+        {!editMode && <h1 className={styles.title}>{cardData.title}</h1>}
+        {editMode && <input text="text" placeholder={cardData.title} className={styles["title-edit"]}/>}
+        <button onClick={handleEditButtonClick} className={styles["more-button"]}><img src="icons/more-icon.png" className={styles["more-icon"]}/></button>
+      </section>
+      <p>{cardData.text}</p>
+      {editMode && <button onClick={handleSaveClick} className={styles["save-button"]}>Save</button>}
     </div>
   )
 }
